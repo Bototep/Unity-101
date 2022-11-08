@@ -19,25 +19,29 @@ public class Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             //print("W");
-            transform.position = new Vector3(0, transform.position.y + 0.001f, 0);         
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, 0);         
         }
         if (Input.GetKey(KeyCode.S))
         {
             //print("W");
-            transform.position = new Vector3(0, transform.position.y - 0.001f, 0); 
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, 0); 
             
         }
         if (Input.GetKey(KeyCode.A))
         {
             //print("W");
-            transform.position = new Vector3(transform.position.x - 0.001f, 0, 0);
+            transform.position = new Vector3(transform.position.x - 0.05f, transform.position.y, 0);
 
         }
         if (Input.GetKey(KeyCode.D))
         {
             //print("W");
-            transform.position = new Vector3(transform.position.x + 0.001f, 0, 0);
+            transform.position = new Vector3(transform.position.x + 0.05f, transform.position.y, 0);
 
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = new Vector3(0,0,0);
         }
     }
 
